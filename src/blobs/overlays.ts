@@ -197,7 +197,8 @@ function parseRsrcLines(rsrc: string, targetPkg: string, targetName: string | nu
       curFlags = valueLine![1]
 
       // Exclude broken locales, drawables and styles for now
-      if (EXCLUDE_LOCALES.has(curFlags!) || curType == 'drawable' || curType == 'style') {
+      if (EXCLUDE_LOCALES.has(curFlags!) || curType == 'drawable' || curType == 'plurals' ||
+        curType == 'style') {
         continue
       }
 
